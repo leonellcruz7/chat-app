@@ -1,0 +1,12 @@
+.register {
+    height: 100vh;
+}
+
+.register .mdCon {
+    height: 100%;
+}
+
+.register .row {
+    height: 100%;
+    align-items: center;
+}
