@@ -35,3 +35,8 @@
     cursor: pointer;
     color: rgb(39, 149, 223);
 }
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,37 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contacts.css'
 import { FiMessageSquare, FiSearch } from 'react-icons/fi'
+import { useContext } from 'react'
+import UserContext from '../UserContext'
+import Search from './Search'
+import { useEffect } from 'react'
 
 export default function Contacts() {
+    const { user } = useContext(UserContext)
+    const [searchInput, setSearchInput] = useState('')
+
+    const search = () => {
+
+    }
     return (
         <div className="contacts">
             <div className="head">
-                <img src={require('../img/id.jpg')} alt="" />
-                <p>Chats</p>
-                <FiMessageSquare className='icons' />
+
+                <p>{user.firstName + ' ' + user.lastName}</p>
+                <FiMessageSquare className='icons' onClick={search} />
             </div>
             <div className="search">
                 <FiSearch className='search-icon' />
-                <input type="text" />
-
+                <input type="text" value={searchInput} onChange={e => setSearchInput(e.target.value)} />
             </div>
             <div className="divider"></div>
             <div className="contactlist">
                 <div className="list">
-                    <img src={require('../img/id.jpg')} alt="" />
                     <div className="detail">
-                        <h4>Name</h4>
-                        <p>This is the messagsdfsdfsdfsdfsdfsdfsdsdsdfess</p>
+                        <Search />
                     </div>
                 </div>
-                <div className="list">
-                    <img src={require('../img/id.jpg')} alt="" />
-                    <div className="detail">
-                        <h4>Name</h4>
-                        <p>This is the messagsdfsdfsdfsdfsdfsdfsdsdsdfess</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     )
