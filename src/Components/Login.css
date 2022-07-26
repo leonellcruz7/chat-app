@@ -1,51 +1,37 @@
-.register {
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.register .slogan {
+.login .slogan {
     font-size: 35px;
     margin: 40px 0;
 }
 
-.register .messenger-logo {
+.login .messenger-logo {
     width: 100px;
     margin: 10px 0;
 }
 
-.register .card {
+.login .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 1000px;
 }
 
-.register input {
+.login input {
     width: 400px;
     margin: 5px 0;
 }
 
-.register .notif {
-    border-color: brown;
-}
-
-.register button {
+.login button {
     margin: 10px 0;
 }
 
-.register span {
+.login span {
     cursor: pointer;
     color: rgb(39, 149, 223);
-}
-
-.register form {
-    display: flex;
-    flex-direction: column;
-}
-
-.register .usertaken {
-    color: brown;
-    font-size: 13px;
 }
