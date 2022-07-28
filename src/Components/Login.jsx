@@ -22,6 +22,7 @@ export default function Login() {
                     password: pass
                 })
             }).then(res => res.json()).then(data => {
+
                 if (data == false) {
                     alert('Login Failed')
                 }

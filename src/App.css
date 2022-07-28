@@ -92,8 +92,10 @@ button:hover {
   opacity: .8;
 }
 
+
 .icons {
   font-size: 30px;
+  cursor: pointer;
 }
 
 .divider {

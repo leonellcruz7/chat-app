@@ -6,6 +6,7 @@ import Login from './Components/Login';
 import { useContext, useState } from 'react';
 import UserContext from './UserContext';
 import { useEffect } from 'react';
+import ChatContext from './ChatContext';
 
 
 
@@ -13,6 +14,7 @@ import { useEffect } from 'react';
 function App() {
 
   const [user, setUser] = useState({})
+  const [chat, setChat] = useState({})
 
 
   useEffect(() => {
@@ -22,7 +24,7 @@ function App() {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     }).then(res => res.json()).then(data => {
-      console.log(data)
+
       setUser({
         id: data._id,
         firstName: data.firstName,
@@ -37,11 +39,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <UserContext.Provider value={{ user, setUser }}>
-          <Routes>
-            <Route path='/register' element={<Register />} />
-            <Route path='/contacts' element={<Contacts />} />
-            <Route path='/' element={<Login />} />
-          </Routes>
+          <ChatContext.Provider value={{ chat, setChat }}>
+            <Routes>
+              <Route path='/register' element={<Register />} />
+              <Route path='/contacts' element={<Contacts />} />
+              <Route path='/' element={<Login />} />
+            </Routes>
+          </ChatContext.Provider>
         </UserContext.Provider>
       </BrowserRouter>
     </div>

@@ -1,0 +1,59 @@
+.chatpage {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+
+}
+
+.chatpage .header {
+
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+    height: 7%;
+}
+
+.chatpage .body {
+
+    height: 86%;
+    padding: 20px;
+
+}
+
+.chatpage .body .message.me {
+
+    display: flex;
+    justify-content: end;
+}
+
+.chatpage .body .message p {
+    background-color: rgb(26, 101, 145);
+    color: #fff;
+    max-width: 1000px;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    word-wrap: break-word;
+    width: fit-content;
+}
+
+.chatpage .body .message.me p {
+    background-color: rgb(24, 105, 85);
+}
+
+.chatpage .footer {
+    display: flex;
+    padding: 10px;
+    height: 7%;
+}
+
+.chatpage .footer input {
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.chatpage .footer button {
+    border-radius: 20px;
+    padding: 10px 30px;
+
+}
